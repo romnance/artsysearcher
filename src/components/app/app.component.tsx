@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 
 import Layout from "../layout/layout.component";
 
+import "../../common/styles";
 import "./app.component.css";
 
 function Home() {
