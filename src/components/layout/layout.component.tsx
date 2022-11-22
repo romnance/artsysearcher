@@ -4,10 +4,14 @@ import "./layout.component.css";
 
 const Layout: React.FC = () => {
     return (
-    <div>
-        <header>
+    <div className="Page-container">
+        <header className="Flex-row">
+            <div className="Flex-row">
+                <Link to="/" className="Heading-bold">Artsysearcher</Link>
+                <div className="Ellipse" />
+            </div>
             <nav>
-                <ul>
+                <ul className="Flex-row">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/gallery">Gallery</Link></li>
                     <li><Link to="/nothing-here">Nothing</Link></li>
