@@ -11,14 +11,13 @@
 }
 
 .Show-child p {
-    margin-top: 20px;
-    margin-left: -10px;
+    right: 16px;
+        position: absolute;
     visibility: hidden;
     color: transparent;
 }
 
 .Show-child:hover p {
-    margin-left: 0px;
     font-size: 1rem;
     font-weight: 400;
     color: #000ece;
@@ -37,6 +36,10 @@
     .Upper-block {
         padding: 0 24px;
     }
+.Show-child p {
+    position: relative;
+    margin-top: 20px;
+}
 }
 
 
@@ -46,15 +49,12 @@
 }
 
 input {
+    margin-top: 8px;
     width: 100%;
     padding: 0px 10px;
     appearance: none;
     line-height: 1;
     border-width: 0px 0px 1px;
-    border-top-style: initial;
-    border-right-style: initial;
-    border-left-style: initial;
-    border-image: initial;
     border-bottom-style: solid;
     transition: border-color 0.25s ease 0s, color 0.25s ease 0s;
     font-family: ll-unica77, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -65,6 +65,12 @@ input {
     background-color: rgb(248, 248, 248);
 }
 
+input:focus {
+    outline-width: 0;
+    color: rgb(0, 0, 0);
+    border-color: #000ece;
+    transition: all 0.45s ease-out;
+}
 .Icon-container {
     position: absolute;
     display: flex;
