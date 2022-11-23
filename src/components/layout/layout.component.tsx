@@ -4,7 +4,7 @@ import "./layout.component.css";
 
 const Layout: React.FC = () => {
     return (
-    <div className="Page-container">
+    <div className="Container">
         <header className="Flex-row">
             <div className="Flex-row">
                 <Link to="/" className="Heading-bold">Artsysearcher</Link>
@@ -18,7 +18,11 @@ const Layout: React.FC = () => {
                 </ul>
             </nav>
         </header>
-        <Outlet />
+        <div className="Main-content">
+            <div className="Max-width">
+                <Outlet />
+            </div>
+        </div>
     </div>
     );
 }

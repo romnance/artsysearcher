@@ -1,18 +1,12 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import Home from "../../pages/home/Home";
 
 import Layout from "../layout/layout.component";
 
 import "../../common/styles";
 import "./app.component.css";
 
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
 
 function Gallery() {
   return (

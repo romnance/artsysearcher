@@ -1,0 +1,79 @@
+.Upper-block {
+    padding: 0 12px;
+}
+
+.Search-header {
+    margin: 24px 0;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em;
+}
+
+.Show-child p {
+    margin-top: 20px;
+    margin-left: -10px;
+    visibility: hidden;
+    color: transparent;
+}
+
+.Show-child:hover p {
+    margin-left: 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000ece;
+    visibility: visible;
+    transition: all 0.25s ease 0s;
+}
+
+
+@media screen and (min-width: 768px) {
+    .Search-header {
+        font-size: 60px;
+        line-height: 70px;
+        font-weight: 500 !important;
+    }
+
+    .Upper-block {
+        padding: 0 24px;
+    }
+}
+
+
+.Search-container {
+    position: relative;
+    margin-top: 0px;
+}
+
+input {
+    width: 100%;
+    padding: 0px 10px;
+    appearance: none;
+    line-height: 1;
+    border-width: 0px 0px 1px;
+    border-top-style: initial;
+    border-right-style: initial;
+    border-left-style: initial;
+    border-image: initial;
+    border-bottom-style: solid;
+    transition: border-color 0.25s ease 0s, color 0.25s ease 0s;
+    font-family: ll-unica77, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 50px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    border-color: rgb(194, 194, 194);
+    background-color: rgb(248, 248, 248);
+}
+
+.Icon-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 10px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.Icon-container img {
+    position: relative;
+}
