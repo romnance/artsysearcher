@@ -65,13 +65,24 @@ const Artists: React.FC<ArtistsProps> = ({ term }: ArtistsProps) => {
   return (
     <div
       style={{
+        marginTop: "48px",
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, 100px)",
-        gap: 20,
+        gridTemplateColumns: "repeat(auto-fill, 200px)",
+        gap: 40,
       }}
     >
-      {artists.map((artist: { node: { id: React.Key | null | undefined; displayLabel: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }; }) => (
-        <p key={artist.node.id}>{artist.node.displayLabel}</p>
+      {artists.map((artist: { node: { id: React.Key | null | undefined; displayLabel: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; imageUrl: string | undefined; }; }) => (
+        <div key={artist.node.id}>  
+        <p>{artist.node.displayLabel}</p>       
+        <img
+          src={artist.node.imageUrl}
+          alt="Artist image"
+          style={{
+            width: "100%",
+            border: "1px solid #222222",
+          }}
+        /></div>
+       
       ))}
     </div>
   );
