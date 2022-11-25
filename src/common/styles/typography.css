@@ -9,3 +9,7 @@
 a {
     text-decoration: none;
 }
+.Info-message {
+    color: #828282;
+    font-size: 1.2rem;
+}

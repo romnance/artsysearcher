@@ -1,5 +1,7 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
+import { Node } from "../../common/interfaces/artists";
+import "./artists.css"
 
 export const GET_ARTISTS = gql` 
   query SearchBarRefetchQuery(
@@ -49,7 +51,7 @@ const Artists: React.FC<ArtistsProps> = ({ term }: ArtistsProps) => {
   });
 
   if (loading) {
-    return <div>Loading...</div>;
+    return(<div className="Center"><div className="Loader" /></div>);
   }
 
   if (error) {
@@ -59,19 +61,19 @@ const Artists: React.FC<ArtistsProps> = ({ term }: ArtistsProps) => {
   const artists = data.viewer.searchConnection.edges;
 
   if (!artists.length) {
-    return <p>No artists found. Find another one</p>;
+    return(<div className="Center"><p className="Margins-vl Info-message">No results for <b>{term}</b>. Try again</p></div>);
   }
 
   return (
     <div
       style={{
-        marginTop: "48px",
+        marginTop: "56px",
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, 200px)",
         gap: 40,
       }}
     >
-      {artists.map((artist: { node: { id: React.Key | null | undefined; displayLabel: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; imageUrl: string | undefined; }; }) => (
+      {artists.map((artist: { node: Node }) => (
         <div key={artist.node.id}>  
         <p>{artist.node.displayLabel}</p>       
         <img
@@ -82,7 +84,6 @@ const Artists: React.FC<ArtistsProps> = ({ term }: ArtistsProps) => {
             border: "1px solid #222222",
           }}
         /></div>
-       
       ))}
     </div>
   );

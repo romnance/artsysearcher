@@ -17,3 +17,23 @@
 .Top {
     align-items: flex-start;
 }
+.Center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Margins-vs {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.Margins-vm {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.Margins-vl {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}

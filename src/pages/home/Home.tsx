@@ -7,17 +7,9 @@ import Artists from "../../components/artists/Artists";
 const Home: React.FC = () => {
     const [query, setQuery] = useState("");
 
-
-    function handleChange(e: { target: { value: string; }; }) {
+function handleChange(e: { target: { value: string; }; }) {
         setQuery(e.target.value);
-
-    }
-
-    const ArtistsList = () => {
-        if ( query !== "") {
-            return (<Artists term={query} />)
-        }
-    }
+}
 
     return (
       <div className="Page-container">
@@ -31,9 +23,7 @@ const Home: React.FC = () => {
             <div className="Icon-container"><img src={MagnifyingGlass} alt="Magnifying glass" /></div>
           </div> 
         </div>
-        {ArtistsList()}
-        {/* {query && <Artists term={query} />} */}
-        {/* <PostsGrid posts={posts || []} /> */}
+        {query && <Artists term={query} />}
       </div>)
 }
 
