@@ -7,7 +7,7 @@ export const GET_ARTISTS = gql`
   $hasTerm: Boolean!
 ) {
   viewer {
-  searchConnection(query: $term, mode: AUTOSUGGEST, first: 20) @include(if: $hasTerm) {
+  searchConnection(query: $term, entities: ARTIST, mode: AUTOSUGGEST, first: 20) @include(if: $hasTerm) {
     edges {
       node {
         displayLabel
@@ -18,6 +18,10 @@ export const GET_ARTISTS = gql`
           slug
         }
         ... on Artist {
+            imageUrl
+            slug
+          internalID
+          imageUrl
           statuses {
             artworks
             auctionLots
