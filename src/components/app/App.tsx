@@ -1,11 +1,13 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import { ApolloProvider } from '@apollo/client';
+import client from '../../common/apollo-client';
 import Home from "../../pages/home/Home";
 
-import Layout from "../layout/layout.component";
+import Layout from "../layout/Layout";
 
 import "../../common/styles";
-import "./app.component.css";
+import "./app.css";
 
 
 function Gallery() {
@@ -30,6 +32,7 @@ function NoMatch() {
 const App: React.FC = () => {
     return (
     <>
+     <ApolloProvider client={client}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -40,6 +43,7 @@ const App: React.FC = () => {
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
+    </ApolloProvider>
     </>
     );
 }

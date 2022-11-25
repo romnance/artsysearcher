@@ -1,20 +1,22 @@
 import React, {useState} from "react";
 import "./home.css";
-import MagnifyingGlass from "../../images/magnifying-glass.svg"
+import MagnifyingGlass from "../../images/magnifying-glass.svg";
+import Artists from "../../components/artists/Artists";
+
 
 const Home: React.FC = () => {
-    const [state, setState] = useState({query: '', list: [{url:"", title:""}]})
-    const posts = [{url:"", title:"Art no 1"}, {url:"", title: "Art no 2"}]
+    const [query, setQuery] = useState("");
 
-    const handleChange = (e: { target: { value: string; }; }) => {
-        const results = posts.filter(post => {
-        if (e.target.value === "") return posts
-        return post.title.toLowerCase().includes(e.target.value.toLowerCase())
-    })
-       setState({
-        query: e.target.value,
-        list: results
-    })
+
+    function handleChange(e: { target: { value: string; }; }) {
+        setQuery(e.target.value);
+
+    }
+
+    const ArtistsList = () => {
+        if ( query !== "") {
+            return (<Artists term={query} />)
+        }
     }
 
     return (
@@ -25,10 +27,13 @@ const Home: React.FC = () => {
             <p>Gustav Klimt</p>
         </div>
           <div className="Search-container">
-            <input spellCheck="false" autoFocus autoComplete="off" type="text" value={state.query} onChange={handleChange} placeholder="Search by Artist Name" />
+            <input spellCheck="false" autoFocus autoComplete="off" type="text" value={query} placeholder="Search by Artist Name" onChange={handleChange} />
             <div className="Icon-container"><img src={MagnifyingGlass} alt="Magnifying glass" /></div>
           </div> 
-          </div>
+        </div>
+        {ArtistsList()}
+        {/* {query && <Artists term={query} />} */}
+        {/* <PostsGrid posts={posts || []} /> */}
       </div>)
 }
 
