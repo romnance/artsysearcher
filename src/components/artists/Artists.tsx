@@ -1,5 +1,7 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
+import { Link } from "react-router-dom";
+import Label from "../label/Label";
 import { Node } from "../../common/interfaces/artists";
 import "./artists.css"
 
@@ -65,26 +67,32 @@ const Artists: React.FC<ArtistsProps> = ({ term }: ArtistsProps) => {
   }
 
   return (
-    <div
-      style={{
-        marginTop: "56px",
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, 200px)",
-        gap: 40,
-      }}
-    >
-      {artists.map((artist: { node: Node }) => (
-        <div key={artist.node.id}>  
-        <p>{artist.node.displayLabel}</p>       
-        <img
-          src={artist.node.imageUrl}
-          alt="Artist image"
-          style={{
-            width: "100%",
-            border: "1px solid #222222",
-          }}
-        /></div>
-      ))}
+    <div className="Inner">
+        <div className="Center">
+            <p className="Description Text-center">
+                See works of your favorite artists and get inspired!
+            </p>
+        </div>
+        <ul className="List-grid Margins-vl">
+        {artists.map((artist: { node: Node }) => (
+            <li key={artist.node.id}> 
+                <div className="Artist-card">
+                <Link to={artist.node.href} className="Card-link" />
+                <figure>
+                    <img
+                    className="Card-image"
+                    src={artist.node.imageUrl}
+                    alt="Artist"
+                    />
+                </figure>
+                <div className="Card-info">
+                <h3>{artist.node.displayLabel}</h3>
+                {artist.node.statuses.artworks && <Label label="Artworks" />}  
+                </div>
+                </div>
+            </li>
+        ))}
+        </ul>
     </div>
   );
 }

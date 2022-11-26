@@ -31,7 +31,7 @@ header {
     position: sticky;
     top: 0;
     height: 100px;
-    background-color: rgba(255, 255, 251, 0.8);
+    background-color: rgba(244, 244, 244, 0.8);
     backdrop-filter: blur(0.5em);
     justify-content: space-between;
     padding: 2rem;
@@ -62,14 +62,27 @@ header {
     animation: pulsate 3s infinite;
 }
 
-ul li a {
-    margin-right: 12px;
+ a {
     color: #222222;
     font-size: 1.2rem;
     font-weight: 400;
     transition: color 0.25s ease 0s;
 }
 
-ul li a:hover {
+ a:hover {
     color: #000ece;
+}
+@media only screen and (max-width: 768px) {
+    .Ellipse {
+        width: 30px;
+        height: 30px;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    a {
+        font-size: 1rem;
+    }
 }

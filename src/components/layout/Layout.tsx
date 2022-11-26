@@ -11,11 +11,7 @@ const Layout: React.FC = () => {
                 <div className="Ellipse" />
             </div>
             <nav>
-                <ul className="Flex-row">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/gallery">Gallery</Link></li>
-                    <li><Link to="/nothing-here">Nothing</Link></li>
-                </ul>
+               <Link to="/">Home</Link>
             </nav>
         </header>
         <div className="Main-content">
