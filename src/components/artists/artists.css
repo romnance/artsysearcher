@@ -45,13 +45,16 @@
 
 .List-grid li {
     padding-bottom: 1px;
-    background-image: linear-gradient(to right, #222 0 10%, rgba(255, 255, 255, 0) 10%);
+    background-image: linear-gradient(to right, #222 0 10%, rgba(255, 255, 255, 0) 20%);
     background-position: bottom;
     background-size: 8px 1px;
     background-repeat: repeat-x;
     transition: all .3s;
 }
 
+.List-grid li:active {
+    opacity: 0.5;
+}
 .Artist-card {
     position: relative;
     display: flex;
@@ -65,7 +68,6 @@
 .List-grid li:hover {
     background-color: rgba(123, 255, 77, 0.8);
 }
-
 .Card-link {
     position: absolute;
     top: 0;
