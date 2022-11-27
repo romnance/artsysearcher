@@ -52,12 +52,13 @@
     transform: scale(1.1);
     filter: blur(0);
 }
+
 .List-grid .Art-image {
     padding-bottom: 1px;
     transition: all .3s;
     height: fit-content;
     min-width: 60px;
-        max-width: 100%;
+    max-width: 100%;
 }
 
 @media only screen and (max-width: 768px) {

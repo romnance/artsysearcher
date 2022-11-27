@@ -62,16 +62,17 @@ header {
     animation: pulsate 3s infinite;
 }
 
- a {
+a {
     color: #222222;
     font-size: 1.2rem;
     font-weight: 400;
     transition: color 0.25s ease 0s;
 }
 
- a:hover {
+a:hover {
     color: #000ece;
 }
+
 @media only screen and (max-width: 768px) {
     .Ellipse {
         width: 30px;

@@ -20,6 +20,7 @@
     border-radius: 50%;
     animation: pulsate 1s infinite;
 }
+
 .Inner {
     width: 100%;
     max-width: 1920px;
@@ -45,9 +46,11 @@
 .List-grid li:active {
     opacity: 0.5;
 }
+
 .List-grid .Visited {
     opacity: 0.5;
 }
+
 .Artist-card {
     position: relative;
     display: flex;
@@ -61,6 +64,7 @@
 .List-grid li:hover {
     background-color: rgba(123, 255, 77, 0.8);
 }
+
 .Card-link {
     position: absolute;
     top: 0;

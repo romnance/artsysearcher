@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import { ApolloProvider } from '@apollo/client';
-import client from '../../common/apollo-client';
+import { ApolloProvider } from "@apollo/client";
+import client from "../../common/apollo-client";
 import Home from "../../pages/home/Home";
 
 import Layout from "../layout/Layout";
@@ -9,7 +9,6 @@ import Layout from "../layout/Layout";
 import "../../common/styles";
 import "./app.css";
 import Artist from "../../pages/artist/Artist";
-
 
 function NoMatch() {
   return (
@@ -23,19 +22,19 @@ function NoMatch() {
 }
 
 const App: React.FC = () => {
-    return (
+  return (
     <>
-     <ApolloProvider client={client}>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="artist/:name" element={<Artist />} />
-          <Route path="*" element={<NoMatch />} />
-        </Route>
-      </Routes>
-    </ApolloProvider>
+      <ApolloProvider client={client}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="artist/:name" element={<Artist />} />
+            <Route path="*" element={<NoMatch />} />
+          </Route>
+        </Routes>
+      </ApolloProvider>
     </>
-    );
-}
+  );
+};
 
 export default App;

@@ -1,19 +1,11 @@
 import React from "react";
-import './Button.css';
-
+import "./Button.css";
 
 interface ButtonProps {
-    cb: any
+  cb: any;
 }
 
-const ResetButton: React.FC<ButtonProps> = ({ cb }: ButtonProps) =>  {
-    return (
-        <button 
-        onClick={() => cb()}>
-            Clear search history
-        </button>
-    )
-}
-
+const ResetButton: React.FC<ButtonProps> = ({ cb }: ButtonProps) => {
+  return <button onClick={() => cb()}>Clear search history</button>;
+};
 export default ResetButton;
-

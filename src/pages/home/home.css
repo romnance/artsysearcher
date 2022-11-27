@@ -12,7 +12,7 @@
 
 .Show-child p {
     right: 16px;
-        position: absolute;
+    position: absolute;
     visibility: hidden;
     color: transparent;
 }
@@ -36,10 +36,11 @@
     .Upper-block {
         padding: 0 24px;
     }
-.Show-child p {
-    position: relative;
-    margin-top: 20px;
-}
+
+                .Show-child p {
+                    position: relative;
+                    margin-top: 20px;
+                }
 }
 
 
@@ -71,6 +72,7 @@ input:focus {
     border-color: #000ece;
     transition: all 0.45s ease-out;
 }
+
 .Icon-container {
     position: absolute;
     display: flex;
