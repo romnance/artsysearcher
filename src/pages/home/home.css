@@ -71,6 +71,7 @@ input:focus {
     color: rgb(0, 0, 0);
     border-color: #000ece;
     transition: all 0.45s ease-out;
+    outline: none;
 }
 
 .Icon-container {
