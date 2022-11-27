@@ -10,9 +10,6 @@
     flex-direction: row;
     align-items: center;
 }
-.Baseline {
-    align-items: baseline;
-}
 
 .Top {
     align-items: flex-start;
@@ -23,17 +20,19 @@
     justify-content: center;
 }
 
-.Margins-vs {
-    margin-top: 12px;
-    margin-bottom: 12px;
+.Column {
+    flex-direction: column;
 }
 
-.Margins-vm {
-    margin-top: 16px;
-    margin-bottom: 16px;
+.Margins-v {
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .Margins-vl {
     margin-top: 24px;
     margin-bottom: 24px;
+}
+.Height {
+    height: 100%;
 }

@@ -85,7 +85,7 @@ const Artist: React.FC = () => {
 
   return (
       <div className="Inner">
-                { name && <Info />}
+            { name && <Info />}
       </div>
   );
 }

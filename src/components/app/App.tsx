@@ -13,9 +13,9 @@ import Artist from "../../pages/artist/Artist";
 
 function NoMatch() {
   return (
-    <div>
+    <div className="Center Margins-vl Column Height">
       <h2>Nothing to see here!</h2>
-      <p>
+      <p className="Margins-v">
         <Link to="/">Go to the home page</Link>
       </p>
     </div>

@@ -18,7 +18,7 @@
 
     export interface Edge {
         node: Node;
-        __typename: string;
+        __typename?: string;
     }
 
     export interface SearchConnection {

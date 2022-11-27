@@ -27,17 +27,6 @@
     padding: 0 24px;
 }
 
-.Description {
-    visibility: hidden;
-    color: #000ece;
-    width: 600px;
-    max-width: 100%;
-    font-size: clamp(18px, 15.8px + 0.4vw, 24px);
-    line-height: 1.9rem;
-    font-weight: 400;
-    margin-bottom: 12px;
-}
-
 .List-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -54,6 +43,9 @@
 }
 
 .List-grid li:active {
+    opacity: 0.5;
+}
+.List-grid .Visited {
     opacity: 0.5;
 }
 .Artist-card {
@@ -108,11 +100,6 @@ figure {
 }
 
 @media only screen and (max-width: 700px) {
-    .Description {
-        visibility: visible;
-        line-height: 1.5rem;
-    }
-
     .List-grid {
         grid-template-columns: 1fr 1fr;
         padding-bottom: 20px;
