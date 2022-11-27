@@ -8,15 +8,8 @@ import Layout from "../layout/Layout";
 
 import "../../common/styles";
 import "./app.css";
+import Artist from "../../pages/artist/Artist";
 
-
-function Gallery() {
-  return (
-    <div>
-      <h2>Gallery</h2>
-    </div>
-  );
-}
 
 function NoMatch() {
   return (
@@ -36,10 +29,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="gallery" element={<Gallery />} />
-          {/* Using path="*"" means "match anything", so this route
-                acts like a catch-all for URLs that we don't have explicit
-                routes for. */}
+          <Route path="artist/:name" element={<Artist />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>

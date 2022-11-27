@@ -28,6 +28,7 @@
 }
 
 .Description {
+    visibility: hidden;
     color: #000ece;
     width: 600px;
     max-width: 100%;
@@ -108,6 +109,7 @@ figure {
 
 @media only screen and (max-width: 700px) {
     .Description {
+        visibility: visible;
         line-height: 1.5rem;
     }
 
