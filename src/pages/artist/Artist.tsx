@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from 'react-router-dom';
 import { gql, useQuery } from "@apollo/client";
-import "./artist.css"
+import "./artist.css";
 
 
 export const GET_ARTIST_INFO = gql` 
@@ -66,11 +66,13 @@ const artist = data.artist;
         <div className="Center">
         <div className="List-grid">
             {artist.carousel.images.map((image: { resized: { url: string | undefined; }; }) => (
+                <div className="Art-card">
                 <img
                     className="Art-image"
                     src={image.resized.url}
                     alt="Artist"
                     />
+                </div>
             ))}
         </div>
         </div>

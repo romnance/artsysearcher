@@ -38,10 +38,25 @@
     margin-bottom: 12px;
 }
 
+.Art-card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(20px, 3vw, 50px);
+    line-height: 150%;
+    padding: clamp(20px, 3vw, 50px);
+    transition: all .3s;
+}
+
+.Art-card:hover {
+    transform: scale(1.1);
+    filter: blur(0);
+}
 .List-grid .Art-image {
     padding-bottom: 1px;
     transition: all .3s;
-    margin: 12px;
+    min-width: 60px;
+        max-width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
