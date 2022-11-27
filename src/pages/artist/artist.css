@@ -88,6 +88,10 @@
 
     .Artist-heading img {
         max-width: 40%;
+        height: fit-content;
         margin: auto;
     }
+.List-grid .Art-image {
+    height: fit-content;
+}
 }
