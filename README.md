@@ -4,7 +4,7 @@ Artsysearcher is a web app that integrates with [Artsy](https://github.com/artsy
 
 Can be used for searching your favourite artists, reading the info about them and enjoy their art.
 
-[Check hosted app online]()
+[Check hosted app online](https://artsysearcher.vercel.app/)
 
 # To run on localhost 
 
